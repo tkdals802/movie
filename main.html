@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>HUFS MOVIE</title>
+<link type="text/css" rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <br>
+    <div id="list">
+        <h1><a href="main.html">영화의 전당</a></h1>
+        <ul>
+            <li><a href='selectmovie.html'>영화</a>
+            <li><a href='moviebooking.html'>예매</a>
+            <li><a href='theater.html'>극장안내</a>
+            <li><a href='Event.html'>이벤트</a>
+            <li><a href='CheckBooking.html'>예매확인</a>
+        </ul>
+    </div>
+    <br/><br/>
+    
+    <form>
+    <div class="movieposter"> <!--이미지클릭시 예매페이지로-->
+        <p class="poster">
+            <a href='moviebooking.html'><img src="media/엔드게임.jpg"></a><br> 
+            어벤져스 엔드게임<br>
+            <input type="button" value="영화예매" onclick="location.href='moviebooking.html'"> 
+            <a href='https://movie.naver.com/movie/bi/mi/basic.naver?code=136900'><input type="button" value="영화정보"></a>
+        </p>
+        <p class="poster">
+            <a href='moviebooking.html'><img  src="media/타이타닉.jpg"></a><br>
+            타이타닉<br>
+            <input type="button" value="영화예매" onclick="location.href='moviebooking.html'">
+            <a href='https://movie.naver.com/movie/bi/mi/basic.naver?code=18847'><input type="button" value="영화정보"></a>
+        </p>
+        <p class="poster">
+            <a href='moviebooking.html'><img src="media/이터널스.jpg"></a><br>
+            이터널스<br>
+            <input type="button" value="영화예매" onclick="location.href='moviebooking.html'">
+            <a href='https://movie.naver.com/movie/bi/mi/basic.naver?code=184311'><input type="button" value="영화정보"></a>
+        </p>
+        <p class="poster">
+            <a href='moviebooking.html'><img src="media/러브레터.jpg"></a><br>
+            러브레터<br>
+            <input type="button" value="영화예매" onclick="location.href='moviebooking.html'">
+            <a href='https://movie.naver.com/movie/bi/mi/basic.naver?code=19031#'><input type="button" value="영화정보"></a>
+        </p>
+    </div>
+    </form>
+
+    <div class="youtube">
+        <h2>화제의 개봉예정작</h2>
+        <hr>
+        <iframe class="spider2" width="672" height="378"
+        src="https://www.youtube.com/embed/W7edvITC9g4?autoplay=1&mute=1" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+
+        <a href='https://movie.naver.com/movie/bi/mi/basic.naver?code=208077'><img class="spider" src="media/스파이더맨.jpg"></a>
+        <a href='Event.html'>
+        <p class='event'> 
+            <br>11월19일<br><br>선착순 100명 콜라 무료이벤트!
+            <img class='cola' src='media/콜라.jpg'>
+        </p></a>
+    </div>
+</body>
+</html>

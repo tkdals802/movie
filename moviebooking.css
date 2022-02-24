@@ -1,0 +1,169 @@
+body{
+    background-color: ivory;
+    width : 100%;
+    height : 100%;
+    margin : 0%;
+}
+#list{
+    display: block;
+    background-color: cornsilk;
+    height : 70px;
+    margin : 0px;
+    
+}
+#list h1{
+    display : inline-block;
+    margin : 10px;
+
+}
+#list ul{
+    display : inline-block;
+    width : 1000px;
+    position : absolute;
+    left : 150px;
+    margin : 10px;
+}
+#list ul li{
+    display : inline-block;
+    list-style-type:none;
+    padding : 10px 15px;
+    font-size: 20px;
+    margin : 0px 40px;
+}
+a{
+    color : black;
+    text-decoration: none;
+}
+div.d2{ /*시간선택영역*/
+    border : 1px black solid;
+    display : inline-block;
+    position : absolute;
+    top : 350px;
+}
+#timetable p{ /*시간선택버튼*/
+    display : inline-block;
+    position : absolute;
+    font-size: medium;
+    width : 120px;
+    height : 70px;
+    border : 1px solid black;
+    top : 50px;
+    border-radius: 20px;
+    text-align: center;
+    padding : 15px;
+    visibility: hidden;
+    background: cornsilk;
+}
+.title{ /*시간선택창 영화제목*/
+    display: inline-block;
+    position : absolute;
+    font-size: 25px;
+    text-align: center;
+    left : 20px;
+    top : 320px;
+    visibility: hidden;
+}
+.mt1{
+    left : 80px;;
+}
+.mt2{
+    left : 310px;
+}
+.mt3{
+    left : 550px;
+}
+.mt4{
+    left : 790px;
+}
+table{
+    display : inline-block;
+}
+div.chat{
+    display : inline-block; /*테이블 감싸는 div*/
+    position : absolute;
+    width : 1000px;
+    height : 500px;
+    top : 150px;
+    left : 250px;
+
+}
+p{
+    display : inline-block;
+    position : absolute;
+}
+p.text1{ /*영화선택*/
+    left : 0%;
+    top : 0%;
+    margin : 0px;
+    font-size : 25px;
+}
+p.text2{ /*날짜선택*/
+    left : 50%;
+    top : 0%;
+    margin : 0px;
+    font-size : 25px;
+}
+table{
+    border-collapse : collapse;
+    background-color: cornsilk;
+}
+table.movie{ /*영화제목 표*/
+    display : inline-block;
+    position : absolute;
+    left : 0%;
+    top : 10%;
+    margin : 0px;
+}
+td.a{ /*영화이름표*/
+    width : 480px;
+    height : 40px;
+    text-align: left;
+    border : 1px solid black;
+    border : 1px solid burlywood;
+
+}
+td.a:hover{
+    background :lightpink;
+}
+#date { /*달력*/
+    display: inline-block;
+    position : absolute;
+    left : 50%;
+    top : 10%;
+}
+#date td{
+    width : 65px;
+    height : 40px;
+    border : 1px solid black;
+    padding : 0px 0px 2px 10px;
+    border : 1px solid burlywood;
+}
+#date td:hover{
+    background :lightpink;
+}
+
+
+#date th{
+    height : 40px;
+    border : 1px solid black;
+    border : 1px solid burlywood;
+}
+#list2{
+    background : cornsilk;
+    position : absolute;
+    width : 100%;
+    bottom : 0px;
+    margin : 0px;
+    height : 80px;
+}
+#list2 div{
+    position : absolute;
+    left : 50%;
+    transform: translateX(-50%);
+    width : 1000px;
+    height : 80px;
+}
+#list2 p{
+    margin : 8px;
+    font-size : 12px;
+}

@@ -1,0 +1,160 @@
+body{
+    background-color: ivory;
+    width : 100%;
+    height : 100%;
+    margin : 0%;
+}
+#list{
+    display: block;
+    background-color: cornsilk;
+    height : 70px;
+    margin : 0px;
+    
+}
+#list h1{
+    display : inline-block;
+    margin : 10px;
+    position : absolute;
+    left : 0px;
+
+}
+#list ul{
+    display : inline-block;
+    width : 1000px;
+    position : absolute;
+    left : 150px;
+    margin : 10px;
+
+}
+#list ul li{
+    display : inline-block;
+    list-style-type:none;
+    padding : 10px 15px;
+    font-size: 20px;
+    margin : 0px 40px;
+}
+a{
+    color : black;
+    text-decoration: none;
+}
+
+table{
+    border-collapse: collapse;
+}
+#ta th{
+    border-bottom : 1px solid burlywood;
+    text-align: center;
+    width : 30px;
+    height : 40px;
+}
+#movietitle{/*상단 영화제목, 시간띄우기*/
+    font-size: 25px;
+    display: inline-block;
+    position : absolute;
+    left : 150px;
+    top : 90px;
+    text-align: center;
+    background : cornsilk;
+    border : 1px solid burlywood;
+    border-radius : 20px;
+    width : 380px;
+    height : 20px;
+    padding : 10px 10px 30px 10px;
+    
+
+}
+#selectpeople{ /*인원선택폼창*/
+    position : absolute;
+    left : 150px;
+    top : 200px;
+    width : 400px;
+    height : 400px;
+    background : cornsilk;
+    display : inline-block;
+    border : 1px solid burlywood;
+    border-radius : 20px;
+    text-align: center;
+}
+#selectpeople p{
+    height : 40px;
+    text-align: center;
+    font-weight: bold;
+}
+#selectpeople input[type=radio]{
+    color : red;
+    size : 10px;
+}
+#selectpeople span{
+    padding : 20px;
+    font-size : 20px;
+}
+
+#selectpeople input[type=button]{ /*금액확인버튼*/
+    background: ivory;
+    font-size : 20px;
+    width : 100px;
+    height : 40px;
+    border : 1px solid burlywood;
+}
+#cost{ /*결재비용글자*/
+    font-size: 20px;
+    margin : 10px;
+    display : inline-block;
+}
+#seat{
+    font-size: 20px;
+    margin : 10px;
+    display: inline-block;
+}
+
+#billbutton{ /*결제버튼*/
+    background: cornsilk;
+    font-size : 20px;
+    border : 1px solid burlywood;
+}
+#ta td{ /*좌석선택표1*/
+    width : 40px;
+    height : 40px;
+    border : 1px solid burlywood;
+    background : cornsilk;
+    text-align: center;
+}
+#tb td{ /*좌석선택표2*/
+    width : 40px;
+    height : 40px;
+    border : 1px solid burlywood;
+    background : cornsilk;
+    text-align: center;
+}
+#ta td:hover{
+    background : lightpink;
+}
+#tb td:hover{
+    background : lightpink;
+}
+span{
+    font-size : 30px;
+}
+hr{
+    border : 2px solid black;
+}
+div.tab{ /*스크린, 좌석표영역*/
+    display : inline-block;
+    position : absolute;
+    top : 100px;
+    left : 750px;
+    width : 500px;
+    height : 500px;
+    text-align: center;
+}
+table.a{
+    position : absolute;
+    top : 70px;
+    left : 0px;
+}
+table.b{
+    position : absolute;
+    top : 70px;
+    left : 300px;
+
+}

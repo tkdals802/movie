@@ -1,0 +1,79 @@
+body{
+    background-color: ivory;
+    width : 100%;
+    height : 100%;
+    margin : 0%;
+}
+#list{
+    display: block;
+    background-color: cornsilk;
+    height : 70px;
+    margin : 0px;
+    
+}
+#list h1{
+    display : inline-block;
+    margin : 10px;
+    position : absolute;
+    left : 0px;
+
+}
+#list ul{
+    display : inline-block;
+    width : 1000px;
+    position : absolute;
+    left : 150px;
+    margin : 10px;
+
+}
+#list ul li{
+    display : inline-block;
+    list-style-type:none;
+    padding : 10px 15px;
+    font-size: 20px;
+    margin : 0px 40px;
+}
+a{
+    color : black;
+    text-decoration: none;
+}
+form{ /*예매리스트 폼 영역*/
+    width : 500px;
+    height : 550px;
+    background: cornsilk;
+    border : 1px solid burlywood;
+    display: inline-block;
+    position : absolute;
+    left : 50px;
+    top : 200px;
+}
+#movielist{
+    padding : 10px;
+}
+input[type=button]{ /*버튼스타일*/
+    background : ivory;
+    position : absolute;
+    right : 10px;
+}
+
+#movieInfo{
+    display: inline-block;
+    position : absolute;
+    left : 700px;
+    top : 200px;
+    width : 400px;
+    border-radius: 20px;
+}
+p{
+    font-size : 20px;
+}
+#movieInfo{
+    font-size: 20px;
+}
+.bookinglist {
+    width : 500px;
+    display: inline-block;
+    position: absolute;
+    left : 50px;
+    top : 100px;
+}

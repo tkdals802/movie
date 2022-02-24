@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">    
+<head>
+<title>자리선택</title>
+<link type="text/css" rel="stylesheet" href="SelectSeat.css">
+</head>
+<body onload="pageload();">
+    <br>
+    <div id="list">
+        <h1 onclick='deletekey()'><a href="main.html">영화의 전당</a></h1>
+        <ul>
+            <li onclick='deletekey()'><a href='selectmovie.html'>영화</a>
+            <li onclick='deletekey()'><a href='moviebooking.html'>예매</a>
+            <li onclick='deletekey()'><a href='theater.html'>극장안내</a>
+            <li onclick='deletekey()'><a href='Event.html'>이벤트</a>
+            <li onclick='deletekey()'><a href='CheckBooking.html'>예매확인</a>
+        </ul>
+    </div>
+    <br/><br/>
+    <div>
+        <p id="movietitle">  </p>
+        <form id='selectpeople'> <!--인원수 선택-->
+            <p>
+                <span>성인</span>
+                <label>0명<input type="radio" value=0 name="성인" onclick='showcost(0)'checked></label>
+                <label>1명<input type="radio" value=12000 name="성인" onclick='showcost(0)'></label>
+                <label>2명<input type="radio" value=24000 name="성인" onclick='showcost(0)'></label>
+                <label>3명<input type="radio" value=36000 name="성인" onclick='showcost(0)'></label>
+                <label>4명<input type="radio" value=48000 name="성인" onclick='showcost(0)'></label>
+            </p>
+            <p>
+                <span>학생</span>
+                <label>0명<input type="radio" value=0 name="청소년" onclick='showcost(1)' checked></label>
+                <label>1명<input type="radio" value=10000 name="청소년" onclick='showcost(1)'></label>
+                <label>2명<input type="radio" value=20000 name="청소년" onclick='showcost(1)'></label>
+                <label>3명<input type="radio" value=30000 name="청소년" onclick='showcost(1)'></label>
+                <label>4명<input type="radio" value=40000 name="청소년" onclick='showcost(1)'></label>
+            </p>
+            <p>
+                <span>경로</span>
+                <label>0명<input type="radio" value=0 name="경로" onclick='showcost(2)'checked></label>
+                <label>1명<input type="radio" value=8000 name="경로" onclick='showcost(2)'></label>
+                <label>2명<input type="radio" value=16000 name="경로" onclick='showcost(2)'></label>
+                <label>3명<input type="radio" value=24000 name="경로" onclick='showcost(2)'></label>
+                <label>4명<input type="radio" value=36000 name="경로" onclick='showcost(2)'></label>
+            </p>
+            <p>
+                <span>우대</span>
+                <label>0명<input type="radio" value=0 name="우대" onclick='showcost(3)'checked></label>
+                <label>1명<input type="radio" value=6000 name="우대" onclick='showcost(3)'></label>
+                <label>2명<input type="radio" value=12000 name="우대" onclick='showcost(3)'></label>
+                <label>3명<input type="radio" value=18000 name="우대" onclick='showcost(3)'></label>
+                <label>4명<input type="radio" value=24000 name="우대" onclick='showcost(3)'></label>
+            </p>
+            <p id="cost">
+                결제비용 : 0원</p>
+            <p id="seat">
+                좌석선택 : </p>
+            <br>
+            <input type="button" onclick='bill()' value="금액확인">  
+            <a href="Payment.html"><input type="button" id="billbutton" onclick="booking()" value="결제"></a>
+        </form>
+
+        
+    </div>
+
+    <script type="text/javascript">
+        var ls=window.localStorage;
+        var radioname=["성인","청소년","경로","우대"];
+        var cost=[0,0,0,0];
+        var tre = [1,2,3,4,5];
+        
+        function showcost(p){ 
+            for(j=0;j<5;j++){
+                if(document.getElementsByName(radioname[p])[j].checked==true){
+                    cost[p]=document.getElementsByName(radioname[p])[j].value;
+                }
+            }
+        }
+        
+        function bill(){
+            var x = 0;
+            for (i=0;i<4;i++)
+                x+=parseInt(cost[i]);
+            document.getElementById("cost").style.visibility="visible";
+            document.getElementById("cost").innerHTML="결제비용 : "+x+"원";
+        }
+    </script>
+
+    <div class="tab">
+        <span>스크린</span>
+        <hr><br>
+        <script type="text/javascript"> /*좌석배치도*/
+            var ls=window.localStorage;
+            var a=["a","b","c","d","e","f","g","h","i","j"];
+            var x="";
+            var K="";
+            var temp="";
+
+            
+            document.write("<table class='a' id='ta'>");
+                for (i=0;i<10;i++){
+                    document.write("<tr><th>"+a[i]+"</th>");
+                    for (j=1;j<6;j++){
+                        document.write("<td id="+a[i]+j+" onclick=change("+a[i]+j+")>"+a[i]+j+"</td>");/*id=a1,a2,b3,b4...*/                    }
+                    document.write("</tr>");
+                }
+            document.write("</table>");
+
+            document.write("<table class='b' id='tb'>");
+                for (i=0;i<10;i++){
+                    document.write("<tr>");
+                    for (j=6;j<11;j++){
+                        document.write("<td id="+a[i]+j+" onclick=change("+a[i]+j+")>"+a[i]+j+"</td>");/*id=f6,f5,g6,g5...*/
+                    }
+                    document.write("</tr>");
+                }
+            document.write("</table>");
+
+            function change(p){ /*표 좌석을 누르면*/
+                for(i=0;i<10;i++){
+                    for(j=1;j<11;j++)
+                        document.getElementById(a[i]+j).style.background='cornsilk'; /*원래 핑크칸을 지우고 클릭한 칸 채우기*/
+                }
+                p.style.background='lightpink';
+                x=p.innerHTML;
+                seat.innerHTML="좌석선택 : "+x;
+            }
+            function pageload(){ /*영화제목, 시간 띄우기*/
+                document.getElementById('movietitle').innerHTML=ls.getItem(ls.length-2);
+            }
+            function booking(){ /*좌석 결정하기*/
+                var K="";
+                temp=ls.getItem(ls.length-2).split('-');
+                for(i=0;i<3;i++)
+                    K+=temp[i]+"-";
+                K+=x;
+                if(x=="")
+                    alert("좌석을 선택해 주세요");
+                else{ 
+                    ls.setItem(ls.length-2,K);
+                    alert('예약되었습니다.');
+                }
+            }
+            function deletekey(){
+                var x=0;
+                ls.removeItem(ls.length-2);
+                ls.setItem('key',ls.length-2);
+            }
+        </script>
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>
